@@ -1,6 +1,6 @@
 # Appendix
 
-Filerna i detta appendix utgör agentic-filer vars syfte är att instruera AI-modeller om önskat beteende, specifikationsfiler -- superspec och iterativa -- som instruerar AI-modeller om önskad funktionalitet, samt en testsuite med Gherkin-scenarier som ligger till grund för enhetstesterna som också finns med i detta appendix.
+Filerna i detta appendix utgör agentic-filer vars syfte är att instruera AI-modeller om önskat beteende, specifikationsfiler &mdash; superspec och iterativa &mdash; som instruerar AI-modeller om önskad funktionalitet, samt en testsuite med Gherkin-scenarier som ligger till grund för enhetstesterna som också finns med i detta appendix.
 
 ### Agentic-filer
 
