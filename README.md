@@ -5,24 +5,24 @@ Filerna i detta appendix utgör agentic-filer vars syfte är att instruera AI-mo
 ### Agentic-filer
 
 #### agent_super.md
-Intruktioner för önskad beteende vid prototypskapande tillsammans med <superspec.md</b>
+Intruktioner för önskad beteende vid prototypskapande tillsammans med **superspec.md**
 
 #### agent_iterative.md
-Intruktioner för önskad beteende vid prototypskapande tillsammans med <iteration_1.md</b>, <iteration_2.md</b> och <iteration_3.md</b>.
+Intruktioner för önskad beteende vid prototypskapande tillsammans med **iteration_1.md**, **iteration_2.md** och **iteration_3.md**.
 
 ### Specifikationsfiler
 
 #### superspec.md
-Superspecifikationen som innehåller all önskad funktionalitet prototypen ska ha. Denna används tillsammans med <agent_super.md</b> för att AI-modellerna ska skapa en komplett prototyp.
+Superspecifikationen som innehåller all önskad funktionalitet prototypen ska ha. Denna används tillsammans med **agent_super.md** för att AI-modellerna ska skapa en komplett prototyp.
 
 #### iteration_1.md
-Iterativ specifikation 1 som innehåller all önskad funktionalitet prototypen ska ha avseende iteration 1. Denna används tillsammans med <agent_iterative.md</b> för att AI-modellerna ska skapa en första prototyp.
+Iterativ specifikation 1 som innehåller all önskad funktionalitet prototypen ska ha avseende iteration 1. Denna används tillsammans med **agent_iterative.md** för att AI-modellerna ska skapa en första prototyp.
 
 #### iteration_2.md
-Iterativ specifikation 2 som innehåller all önskad funktionalitet prototypen ska ha avseende iteration 2. Denna används tillsammans med <agent_iterative.md</b> för att AI-modellerna ska utöka prototypen från iteration 1.
+Iterativ specifikation 2 som innehåller all önskad funktionalitet prototypen ska ha avseende iteration 2. Denna används tillsammans med **agent_iterative.md** för att AI-modellerna ska utöka prototypen från iteration 1.
 
 #### iteration_3.md
-Iterativ specifikation 3 som innehåller all önskad funktionalitet prototypen ska ha avseende iteration 3. Denna används tillsammans med <agent_iterative.md</b> för att AI-modellerna ska utöka prototypen från iteration 1 och iteration 2.
+Iterativ specifikation 3 som innehåller all önskad funktionalitet prototypen ska ha avseende iteration 3. Denna används tillsammans med **agent_iterative.md** för att AI-modellerna ska utöka prototypen från iteration 1 och iteration 2.
 
 ### Tester
 
