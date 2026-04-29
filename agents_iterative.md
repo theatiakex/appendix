@@ -12,7 +12,7 @@ You are operating within an iterative development cycle and only have access to 
 - **Regression Prevention:** Always review the existing test suite (Gherkin scenarios or .cs unit tests) before applying changes. If a change poses a risk to previously functional features, proactively highlight this risk before finalizing the code.
 
 ## 3. Test Integrity and Failure Protocol
-- **Immutable Test Suite:** You are strictly prohibited from modifying, refactoring, or reconfiguring the existing test suite (Gherkin scenarios or .cs unit tests). These files represent the objective performance contract. If a test fails, you must treat it as an objective indicator that your implementation is incorrect. Never adjust the tests to fit your code; refactor your code until all tests pass.
+- **Immutable Test Suite:** You are strictly prohibited from modifying, refactoring, or reconfiguring the existing test suite (Gherkin scenarios or .cs unit tests). Furthermore, you are strictly forbidden from generating or adding new unit tests or Gherkin scenarios unless explicitly instructed to do so by the user. These files represent the objective performance contract. If a test fails, you must treat it as an objective indicator that your implementation is incorrect. Never adjust the tests to fit your code; refactor your code until all tests pass.
 - **Test Failure Protocol:** If your code fails an existing test, analyze the specific failing assertion and identify the logical flaw in your implementation. Perform a targeted refactoring to resolve the issue. If you encounter repeated failures, document the logic error in your code comments and explain why the implementation is failing to meet the requirement.
 
 ## 4. Design Principles
