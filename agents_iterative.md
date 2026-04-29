@@ -34,3 +34,9 @@ You are operating within an iterative development cycle and only have access to 
 
 ## 7. Iteration Discipline
 - **State Awareness:** Maintain awareness of which iteration you are currently in. Do not introduce features from future iterations (e.g., Shot Change logic) until the current iteration’s requirements are fully satisfied and verified.
+
+## 8. Telemetry & Performance Tracking
+- **Continuous Logging:** Every time you execute or analyze the output of `dotnet test`, you MUST log the results before attempting any code fixes. 
+- **Log File:** Maintain a file named `test_metrics.jsonl` (JSON Lines format) in the root directory.
+- **Log Format:** For every test run, append a new JSON object to `test_metrics.jsonl` with the following schema: `{"project_iteration": [number], "attempt": [number], "timestamp": "[ISO-8601]", "total_tests": [number], "passed": [number], "failed": [number], "pass_rate_percentage": [number]}`. *Note: `project_iteration` refers to the current specification phase (e.g., 1 for iteration_1.md), and `attempt` refers to the number of times you have run the tests during this phase.*
+- **Completion Graph:** When the `pass_rate_percentage` reaches `100` (all tests pass) for the current project iteration, you must automatically generate a Markdown file named `test_performance_report_iteration_X.md` (where X is the current project iteration number). This file must include a **Mermaid.js line chart** plotting the `pass_rate_percentage` over the `attempt` numbers, visually demonstrating the attempts required to reach success for this specific phase.
