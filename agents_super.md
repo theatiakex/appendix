@@ -40,3 +40,9 @@ You have access to the full scope of the project. Your goal is to design and imp
 - **Log File:** Maintain a file named `test_metrics.jsonl` (JSON Lines format) in the root directory.
 - **Log Format:** For every test run, append a new JSON object to `test_metrics.jsonl` with the following schema: `{"attempt": [number], "timestamp": "[ISO-8601]", "total_tests": [number], "passed": [number], "failed": [number], "pass_rate_percentage": [number]}`
 - **Completion Graph:** When the `pass_rate_percentage` reaches `100` (all tests pass), you must automatically generate a Markdown file named `test_performance_report.md`. This file must include a **Mermaid.js line chart** plotting the `pass_rate_percentage` over the `attempt` numbers, visually demonstrating the iterations required to reach success.
+
+## 8. Telemetry & Performance Tracking
+- **Continuous Logging:** Every time you execute or analyze the output of `dotnet test`, you MUST log the results before attempting any code fixes. This applies to both compilation failures and logical test failures.
+- **Log File:** Maintain a file named `test_metrics.jsonl` (JSON Lines format) in the root directory.
+- **Log Format:** For every execution attempt, append a new JSON object to `test_metrics.jsonl` with the following schema: `{"attempt": [number], "timestamp": "[ISO-8601]", "build_successful": [boolean], "total_tests": [number], "passed": [number], "failed": [number], "pass_rate_percentage": [number]}`. 
+  - *Note:* If the build fails (compilation error), set `"build_successful": false` and set the test metrics (`total_tests`, `passed`, `failed`, `pass_rate_percentage`) to `0`.
