@@ -1,0 +1,9 @@
+-- Super --
+Read agents_super.md and superspec.md . Create a prototype based on these files.
+
+-- Iteration 1 --
+Read agents_iterative.md and iteration_1.md . Create a prototype based on these files.
+-- Iteration 2 --
+Read agents_iterative.md and iteration_2.md . Add onto the prototype based on these files.
+-- Iteration 3 --
+Read agents_iterative.md and iteration_3.md . Add onto the prototype based on these files.
