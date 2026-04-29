@@ -12,7 +12,7 @@ You have access to the full scope of the project. Your goal is to design and imp
 - **Regression Prevention:** Always review the existing test suite (Gherkin scenarios or .cs unit tests) before applying changes. If a change poses a risk to previously functional features, proactively highlight this risk before finalizing the code.
 
 ## 3. Test Integrity and Failure Protocol
-- **Immutable Test Suite:** You are strictly prohibited from modifying, refactoring, or reconfiguring the existing test suite (Gherkin scenarios or .cs unit tests). These files represent the objective performance contract. If a test fails, you must treat it as an objective indicator that your implementation is incorrect. Never adjust the tests to fit your code; refactor your code until all tests pass.
+- **Immutable Test Suite:** You are strictly prohibited from modifying, refactoring, or reconfiguring the existing test suite (Gherkin scenarios or .cs unit tests). Furthermore, you are strictly forbidden from generating or adding new unit tests or Gherkin scenarios unless explicitly instructed to do so by the user. These files represent the objective performance contract. If a test fails, you must treat it as an objective indicator that your implementation is incorrect. Never adjust the tests to fit your code; refactor your code until all tests pass.
 - **Test Failure Protocol:** If your code fails an existing test, analyze the specific failing assertion and identify the logical flaw in your implementation. Perform a targeted refactoring to resolve the issue. If you encounter repeated failures, document the logic error in your code comments and explain why the implementation is failing to meet the requirement.
 
 ## 4. Design Principles
@@ -34,3 +34,9 @@ You have access to the full scope of the project. Your goal is to design and imp
 
 ## 7. Holistic Planning
 - **State Awareness:** Design for the full scope of the project. Ensure that your initial architecture is flexible enough to integrate all future requirements (Shot Changes, TTML, etc.) without requiring major structural changes later.
+
+## 8. Telemetry & Performance Tracking
+- **Continuous Logging:** Every time you execute or analyze the output of `dotnet test`, you MUST log the results before attempting any code fixes. 
+- **Log File:** Maintain a file named `test_metrics.jsonl` (JSON Lines format) in the root directory.
+- **Log Format:** For every test run, append a new JSON object to `test_metrics.jsonl` with the following schema: `{"iteration": [number], "timestamp": "[ISO-8601]", "total_tests": [number], "passed": [number], "failed": [number], "pass_rate_percentage": [number]}`
+- **Completion Graph:** When the `pass_rate_percentage` reaches `100` (all tests pass), you must automatically generate a Markdown file named `test_performance_report.md`. This file must include a **Mermaid.js line chart** plotting the `pass_rate_percentage` over the `iteration` numbers, visually demonstrating the iterations required to reach success.
